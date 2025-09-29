@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script type="speculationrules">
+    {
+      "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
+      "prefetch": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }]
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich bei Ihnen melden.">
+  <meta name="keywords" content="Danke, Nachricht, Kontakt, Hausarzt, Krumbach, Bayern">
+  <title>Vielen Dank | Hausarztpraxis Krumbach</title>
+  <!-- Tailwind CSS & Fonts -->
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231E6BDB'%3E%3Cpath d='M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z'/%3E%3C/svg%3E">
+  <!-- Goo filter for liquid animation -->
+  <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute">
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"/>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </svg>
+  <style>
+    /* Performance optimizations */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { text-rendering: optimizeSpeed; }
+    
+
+
+    .glass-effect { background: linear-gradient(to right, rgba(30, 107, 219, 0.95), rgba(51, 65, 85, 0.95)); border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+    .mobile-menu { position: fixed; inset: 0; z-index: 40; pointer-events: none; }
+    .mobile-menu.active { pointer-events: auto; }
+    .mobile-dropdown { 
+      position: fixed; 
+      left: 50%; 
+      top: 84px; 
+      transform: translate(-50%, -10px) scaleY(0.2) translateZ(0); 
+      transform-origin: 50% 0; 
+      width: calc(100% - 2rem); 
+      max-width: 520px; 
+      opacity: 0; 
+      transition: transform 210ms cubic-bezier(.22,.61,.36,1), opacity 210ms ease; 
+      border-radius: 28px; 
+      overflow: hidden;
+      will-change: transform, opacity;
+    }
+    .mobile-menu.active .mobile-dropdown { 
+      transform: translate(-50%, 0) scaleY(1) translateZ(0); 
+      opacity: 1; 
+    }
+    .mobile-dropdown::before { content:''; position:absolute; top:-18px; left:50%; transform:translateX(-50%); width:72px; height:36px; background: rgba(255,255,255,0.28); border-radius: 36px 36px 0 0; filter: url(#goo); opacity:0; }
+    .mobile-menu.opening .mobile-dropdown::before { animation: blobIn 420ms ease forwards; }
+    .mobile-menu.closing .mobile-dropdown::before { animation: blobOut 420ms ease forwards; }
+    @keyframes blobIn { 0%{ opacity:1; transform: translateX(-50%) translateY(-12px) scaleX(.5); height:36px; } 70%{ opacity:1; transform: translateX(-50%) translateY(0) scaleX(1.1); height:18px; } 100%{ opacity:0; transform: translateX(-50%) translateY(0) scaleX(1); height:0; } }
+    @keyframes blobOut { 0%{ opacity:0; height:0; transform: translateX(-50%) translateY(0) scaleX(1);} 30%{ opacity:1; height:18px; } 100%{ opacity:1; transform: translateX(-50%) translateY(-12px) scaleX(.5); height:36px; } }
+    .overlay { opacity: 0; transition: opacity 0.4s ease; }
+    .mobile-menu.active .overlay { opacity: 1; }
+    body.menu-open { overflow: auto; }
+    .hamburger span { transition: all 0.3s ease-in-out; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    .scroll-indicator { position: fixed; bottom: 20px; right: 20px; background: var(--color-brand-primary); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; opacity: 0; visibility: hidden; z-index: 50; }
+    .scroll-indicator.visible { opacity: 1; visibility: visible; }
+    .scroll-indicator:hover { transform: translateY(-3px); background: var(--color-brand-primary-hover); }
+
+    /* Thank you page specific animations */
+    .fade-in { animation: fadeIn 0.8s ease-out; }
+    .slide-up { animation: slideUp 0.8s ease-out; }
+    .bounce-in { animation: bounceIn 1s ease-out; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(0.3); }
+      50% { opacity: 1; transform: scale(1.05); }
+      70% { transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .success-icon {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Cursor styles for interactive elements */
+    .hamburger,
+    .close-mobile,
+    .cta-button,
+    button[type="submit"],
+    .nav-link,
+    a[href] {
+      cursor: pointer !important;
+    }
+  </style>
+</head>
+<body class="font-sans bg-subtle">
+  <!-- Header & Navigation -->
+  <nav id="floating-nav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-transform duration-300 will-change-transform">
+    <div class="bg-white/90 border border-white/30 rounded-full shadow-lg px-6 py-3">
+      <div class="flex items-center space-x-8">
+              <a href="/" class="text-lg font-bold text-primary hover:text-primary-dark transition-colors duration-300 flex items-center gap-2" aria-label="Startseite">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z"/></svg>
+      </a>
+                 <div class="hidden md:flex items-center space-x-6">
+                                                                 <a href="/#aktuelles" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Aktuelles</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+           
+          <a href="/#leistungen" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Leistungen</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+           
+          <a href="/#praxis" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Praxis</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+        <a href="impressum" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+          <span>Impressum</span>
+          <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+        </a>
+        <a href="datenschutz" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+          <span>Datenschutz</span>
+          <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+        </a>
+                                                                                                 <a href="/#kontakt" class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 transform shadow-lg">
+              <span>Kontakt</span>
+            </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button class="hamburger flex flex-col justify-center items-center w-6 h-6 space-y-1 focus:outline-none">
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Menu (Dropdown under navbar) -->
+  <div class="mobile-menu">
+    <div class="overlay absolute inset-0"></div>
+    <div class="mobile-dropdown bg-white/90 border border-white/30 rounded-2xl shadow-lg">
+      <div class="flex items-center justify-between px-5 py-3">
+        <a href="/" class="flex items-center gap-3 text-primary font-semibold" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z"/></svg>
+          <span>Startseite</span>
+        </a>
+        <button class="close-mobile w-8 h-8 rounded-full bg-white/50 hover:bg-white/70 flex items-center justify-center" aria-label="Menü schließen">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="currentColor"><path d="M6.225 4.811 4.811 6.225 10.586 12l-5.775 5.775 1.414 1.414L12 13.414l5.775 5.775 1.414-1.414L13.414 12l5.775-5.775-1.414-1.414L12 10.586 6.225 4.811z"/></svg>
+        </button>
+      </div>
+            <nav class="px-2 py-2">
+                                     <a href="/#aktuelles" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-newspaper text-primary"></i>
+             <span class="text-high font-medium">Aktuelles</span>
+           </a>
+          <a href="/#leistungen" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-list text-primary"></i>
+             <span class="text-high font-medium">Leistungen</span>
+           </a>
+          <a href="/#praxis" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-clinic-medical text-primary"></i>
+             <span class="text-high font-medium">Praxis</span>
+           </a>
+          <a href="/#kontakt" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-envelope text-primary"></i>
+             <span class="text-high font-medium">Kontakt</span>
+           </a>
+        <a href="impressum" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+          <i class="fas fa-file-contract text-primary"></i>
+          <span class="text-high font-medium">Impressum</span>
+        </a>
+        <a href="datenschutz" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+          <i class="fas fa-shield-alt text-primary"></i>
+          <span class="text-high font-medium">Datenschutz</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <!-- Thank You Section -->
+    <section class="pt-8 pb-20 min-h-screen flex items-center justify-center relative">
+      <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80');"></div>
+      <div class="absolute inset-0 bg-black/40"></div>
+      
+      <div class="relative max-w-4xl w-full mx-auto px-4">
+        <div class="glass-card p-12 rounded-card shadow-card-hover flex flex-col items-center text-center gap-8 fade-in">
+          
+          <!-- Success Icon -->
+          <div class="bounce-in">
+            <div class="w-24 h-24 card-gradient-success rounded-full flex items-center justify-center shadow-xl success-icon">
+              <i class="fas fa-check text-4xl text-white"></i>
+            </div>
+          </div>
+
+          <!-- Main Message -->
+          <div class="space-y-6 slide-up">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair leading-tight">
+              <span class="text-gradient-success">Vielen Dank!</span>
+            </h1>
+            
+            <div class="space-y-4 max-w-3xl">
+              <h2 class="text-2xl md:text-3xl font-semibold text-high font-playfair">
+                Ihre Nachricht wurde erfolgreich gesendet
+              </h2>
+              
+
+            </div>
+          </div>
+
+          <!-- Information Card -->
+          <div class="w-full max-w-md slide-up" style="animation-delay: 0.3s;">
+            <!-- Response Time Card -->
+            <div class="glass-card p-6 rounded-card shadow-card-hover card-hover-lift">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-12 h-12 card-gradient-info rounded-full flex items-center justify-center">
+                  <i class="fas fa-clock text-white text-lg"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-high font-playfair">Antwortzeit</h3>
+              </div>
+              <p class="text-medium font-poppins">
+                Wir haben Ihre Anfrage erhalten und werden uns schnellstmöglich bei Ihnen melden.
+              </p>
+            </div>
+          </div>
+            
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 slide-up" style="animation-delay: 0.6s;">
+            <a href="/" class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white px-8 py-4 rounded-full text-lg font-semibold font-poppins shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+              Zur Startseite
+            </a>
+
+                         <a href="/#kontakt" class="inline-flex items-center gap-3 bg-white/80 hover:bg-white text-primary hover:text-primary-hover px-8 py-4 rounded-full text-lg font-semibold font-poppins shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-white/30">
+                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26c.67.36 1.45.36 2.12 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 0 002 2z"></path>
+                 </svg>
+                 Weitere Nachricht senden
+               </a>
+          </div>
+
+          <!-- Additional Info -->
+          <div class="bg-blue-50/80 border-l-4 border-blue-500 p-6 rounded-card slide-up max-w-2xl" style="animation-delay: 0.9s;">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-info-circle text-blue-500 text-xl mt-1"></i>
+              <div>
+                <h4 class="text-lg font-semibold text-high font-playfair mb-2">Wichtiger Hinweis</h4>
+                <p class="text-medium font-poppins">
+                  Bei medizinischen Notfällen wenden Sie sich bitte direkt an den Notruf <strong>112</strong> 
+                  oder besuchen Sie die nächste Notaufnahme.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-gray-500 text-sm">&copy; 2025 Hausarztpraxis Yilmaz Alle Rechte vorbehalten.</div>
+      <div class="flex gap-4">
+        <a href="impressum" class="text-gray-400 hover:text-primary transition-colors">Impressum</a>
+        <a href="datenschutz" class="text-gray-400 hover:text-primary transition-colors">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle with proper animation classes
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const overlay = mobileMenu ? mobileMenu.querySelector('.overlay') : null;
+      const closeBtn = mobileMenu ? mobileMenu.querySelector('.close-mobile') : null;
+      const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+      
+      const toggleMobileMenu = (open) => {
+        if (!mobileMenu) return;
+        // add opening/closing classes to enhance the goo animation timing
+        mobileMenu.classList.remove('opening','closing');
+        if (open) {
+          mobileMenu.classList.add('opening');
+          mobileMenu.classList.add('active');
+        } else {
+          mobileMenu.classList.add('closing');
+          // Wait for animation to finish before disabling pointer events
+          setTimeout(() => {
+            mobileMenu.classList.remove('active');
+            mobileMenu.classList.remove('closing');
+          }, 210);
+        }
+        document.body.classList.toggle('menu-open', open);
+        if (hamburger) hamburger.classList.toggle('active', open);
+      };
+      
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => toggleMobileMenu(!mobileMenu.classList.contains('active')));
+      }
+      if (overlay) overlay.addEventListener('click', () => toggleMobileMenu(false));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleMobileMenu(false));
+      mobileLinks.forEach(l => l.addEventListener('click', () => toggleMobileMenu(false)));
+    });
+
+    // Floating navbar scroll effect - Optimized with throttling
+    let ticking = false;
+    function updateNavbar() {
+        const nav = document.getElementById('floating-nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('top-4');
+            nav.classList.remove('top-6');
+        } else {
+            nav.classList.remove('top-4');
+            nav.classList.add('top-6');
+        }
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    });
+
+    // Auto-redirect after 10 seconds (optional)
+    // setTimeout(() => {
+    //     window.location.href = 'index.html';
+    // }, 10000);
+  </script>
+</body>
+</html>

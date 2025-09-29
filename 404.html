@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seite nicht gefunden - Hausarztpraxis Dr. Yilmaz in Krumbach, Bayern">
+  <title>404 - Seite nicht gefunden | Hausarztpraxis Krumbach</title>
+  <!-- Tailwind CSS & Fonts -->
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231E6BDB'%3E%3Cpath d='M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z'/%3E%3C/svg%3E">
+  <!-- Goo filter for liquid animation -->
+  <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute">
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"/>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </svg>
+  <style>
+
+    .glass-effect { background: linear-gradient(to right, rgba(30, 107, 219, 0.95), rgba(51, 65, 85, 0.95)); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+    .mobile-menu { position: fixed; inset: 0; z-index: 40; pointer-events: none; }
+    .mobile-menu.active { pointer-events: auto; }
+    .mobile-dropdown { 
+      position: fixed; 
+      left: 50%; 
+      top: 84px; 
+      transform: translate(-50%, -10px) scaleY(0.2) translateZ(0); 
+      transform-origin: 50% 0; 
+      width: calc(100% - 2rem); 
+      max-width: 520px; 
+      opacity: 0; 
+      transition: transform 210ms cubic-bezier(.22,.61,.36,1), opacity 210ms ease; 
+      border-radius: 28px; 
+      overflow: hidden;
+      will-change: transform, opacity;
+    }
+    .mobile-menu.active .mobile-dropdown { 
+      transform: translate(-50%, 0) scaleY(1) translateZ(0); 
+      opacity: 1; 
+    }
+    .mobile-dropdown::before { content:''; position:absolute; top:-18px; left:50%; transform:translateX(-50%); width:72px; height:36px; background: rgba(255,255,255,0.28); border-radius: 36px 36px 0 0; filter: url(#goo); opacity:0; }
+    .mobile-menu.opening .mobile-dropdown::before { animation: blobIn 420ms ease forwards; }
+    .mobile-menu.closing .mobile-dropdown::before { animation: blobOut 420ms ease forwards; }
+    @keyframes blobIn { 0%{ opacity:1; transform: translateX(-50%) translateY(-12px) scaleX(.5); height:36px; } 70%{ opacity:1; transform: translateX(-50%) translateY(0) scaleX(1.1); height:18px; } 100%{ opacity:0; transform: translateX(-50%) translateY(0) scaleX(1); height:0; } }
+    @keyframes blobOut { 0%{ opacity:0; height:0; transform: translateX(-50%) translateY(0) scaleX(1);} 30%{ opacity:1; height:18px; } 100%{ opacity:1; transform: translateX(-50%) translateY(-12px) scaleX(.5); height:36px; } }
+    .overlay { opacity: 0; transition: opacity 0.4s ease; }
+    .mobile-menu.active .overlay { opacity: 1; }
+    body.menu-open { overflow: auto; }
+    .hamburger span { transition: all 0.3s ease-in-out; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    
+    /* Cursor styles for interactive elements */
+    .hamburger,
+    .close-mobile,
+    .cta-button,
+    button[type="submit"],
+    .nav-link,
+    a[href] {
+      cursor: pointer !important;
+    }
+  </style>
+</head>
+<body class="font-sans bg-subtle">
+  <!-- Header & Navigation -->
+  <nav id="floating-nav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-transform duration-300 will-change-transform">
+    <div class="bg-white/90 border border-white/30 rounded-full shadow-lg px-6 py-3">
+      <div class="flex items-center space-x-8">
+        <a href="/" class="text-lg font-bold text-primary hover:text-primary-dark transition-colors duration-300 flex items-center gap-2" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z"/></svg>
+        </a>
+        <div class="hidden md:flex items-center space-x-6">
+                                     <a href="/#aktuelles" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Aktuelles</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+           
+         <a href="/#leistungen" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Leistungen</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+           
+         <a href="/#praxis" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Praxis</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+          <a href="impressum" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+            <span>Impressum</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+          <a href="datenschutz" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+            <span>Datenschutz</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+                                <a href="/#kontakt" class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 transform shadow-lg">
+             <span>Kontakt</span>
+           </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button class="hamburger flex flex-col justify-center items-center w-6 h-6 space-y-1 focus:outline-none">
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu (Dropdown under navbar) -->
+  <div class="mobile-menu">
+    <div class="overlay absolute inset-0"></div>
+    <div class="mobile-dropdown bg-white/90 border border-white/30 rounded-2xl shadow-lg">
+      <div class="flex items-center justify-between px-5 py-3">
+        <a href="/" class="flex items-center gap-3 text-primary font-semibold" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z"/></svg>
+          <span>Startseite</span>
+        </a>
+        <button class="close-mobile w-8 h-8 rounded-full bg-white/50 hover:bg-white/70 flex items-center justify-center" aria-label="Menü schließen">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="currentColor"><path d="M6.225 4.811 4.811 6.225 10.586 12l-5.775 5.775 1.414 1.414L12 13.414l5.775 5.775 1.414-1.414L13.414 12l5.775-5.775-1.414-1.414L12 10.586 6.225 4.811z"/></svg>
+        </button>
+      </div>
+            <nav class="px-2 py-2">
+                  <a href="/#aktuelles" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-newspaper text-primary"></i>
+             <span class="text-high font-medium">Aktuelles</span>
+           </a>
+         <a href="/#leistungen" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-list text-primary"></i>
+             <span class="text-high font-medium">Leistungen</span>
+           </a>
+         <a href="/#praxis" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-clinic-medical text-primary"></i>
+             <span class="text-high font-medium">Praxis</span>
+           </a>
+         <a href="/#kontakt" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+             <i class="fas fa-envelope text-primary"></i>
+             <span class="text-high font-medium">Kontakt</span>
+           </a>
+        <a href="impressum" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+          <i class="fas fa-file-contract text-primary"></i>
+          <span class="text-high font-medium">Impressum</span>
+        </a>
+        <a href="datenschutz" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+          <i class="fas fa-shield-alt text-primary"></i>
+          <span class="text-high font-medium">Datenschutz</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="pt-32 pb-20">
+    <!-- 404 Error Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <!-- Error Icon -->
+        <div class="mb-8">
+          <div class="w-32 h-32 bg-gradient-to-br from-accent-yellow/20 to-primary/20 rounded-full flex items-center justify-center mx-auto">
+            <i class="fas fa-exclamation-triangle text-6xl text-accent-yellow"></i>
+          </div>
+        </div>
+
+        <!-- Error Number -->
+        <div class="mb-6">
+          <h1 class="text-8xl md:text-9xl font-bold text-primary">404</h1>
+        </div>
+
+        <!-- Error Message -->
+        <div class="mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-high mb-4">Seite nicht gefunden</h2>
+          <p class="text-medium text-lg max-w-2xl mx-auto">Die gesuchte Seite existiert leider nicht oder wurde möglicherweise verschoben. Kehren Sie zur Startseite zurück oder nutzen Sie die Navigation oben.</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="/" class="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
+            <i class="fas fa-home mr-2"></i>
+            Zur Startseite
+          </a>
+                     <a href="/#kontakt" class="bg-accent-green hover:bg-accent-green/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition duration-300 transform hover:scale-105 shadow-lg">
+             <i class="fas fa-envelope mr-2"></i>
+             Kontakt aufnehmen
+           </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Mobile menu toggle with proper animation classes
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const overlay = mobileMenu ? mobileMenu.querySelector('.overlay') : null;
+      const closeBtn = mobileMenu ? mobileMenu.querySelector('.close-mobile') : null;
+      const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+      
+      const toggleMobileMenu = (open) => {
+        if (!mobileMenu) return;
+        // add opening/closing classes to enhance the goo animation timing
+        mobileMenu.classList.remove('opening','closing');
+        if (open) {
+          mobileMenu.classList.add('opening');
+          mobileMenu.classList.add('active');
+        } else {
+          mobileMenu.classList.add('closing');
+          // Wait for animation to finish before disabling pointer events
+          setTimeout(() => {
+            mobileMenu.classList.remove('active');
+            mobileMenu.classList.remove('closing');
+          }, 210);
+        }
+        document.body.classList.toggle('menu-open', open);
+        if (hamburger) hamburger.classList.toggle('active', open);
+      };
+      
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => toggleMobileMenu(!mobileMenu.classList.contains('active')));
+      }
+      if (overlay) overlay.addEventListener('click', () => toggleMobileMenu(false));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleMobileMenu(false));
+      mobileLinks.forEach(l => l.addEventListener('click', () => toggleMobileMenu(false)));
+    });
+
+    // Floating navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('floating-nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('top-4');
+            nav.classList.remove('top-6');
+        } else {
+            nav.classList.remove('top-4');
+            nav.classList.add('top-6');
+        }
+    });
+  </script>
+</body>
+</html>

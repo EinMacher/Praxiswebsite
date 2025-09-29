@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <script type="speculationrules">
+    {
+      "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }],
+      "prefetch": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }]
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Datenschutzerklärung der Hausarztpraxis Dr. Yilmaz in Krumbach, Bayern. Informationen zum Datenschutz und der Verarbeitung Ihrer personenbezogenen Daten.">
+  <meta name="keywords" content="Datenschutz, Datenschutzerklärung, Hausarzt, Krumbach, Bayern, DSGVO, Datenschutz-Grundverordnung">
+  <title>Datenschutz | Hausarztpraxis Krumbach</title>
+  <!-- Tailwind CSS & Fonts -->
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231E6BDB'%3E%3Cpath d='M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z'/%3E%3C/svg%3E">
+  <!-- Goo filter for liquid animation -->
+  <svg aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute">
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"/>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+    </filter>
+  </svg>
+  <style>
+
+    .glass-effect { background: linear-gradient(to right, rgba(30, 107, 219, 0.95), rgba(51, 65, 85, 0.95)); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2); }
+    .mobile-menu { position: fixed; inset: 0; z-index: 40; pointer-events: none; }
+    .mobile-menu.active { pointer-events: auto; }
+    .mobile-dropdown { 
+      position: fixed; 
+      left: 50%; 
+      top: 84px; 
+      transform: translate(-50%, -10px) scaleY(0.2) translateZ(0); 
+      transform-origin: 50% 0; 
+      width: calc(100% - 2rem); 
+      max-width: 520px; 
+      opacity: 0; 
+      transition: transform 210ms cubic-bezier(.22,.61,.36,1), opacity 210ms ease; 
+      border-radius: 28px; 
+      overflow: hidden;
+      will-change: transform, opacity;
+    }
+    .mobile-menu.active .mobile-dropdown { 
+      transform: translate(-50%, 0) scaleY(1) translateZ(0); 
+      opacity: 1; 
+    }
+    .mobile-dropdown::before { content:''; position:absolute; top:-18px; left:50%; transform:translateX(-50%); width:72px; height:36px; background: rgba(255,255,255,0.28); border-radius: 36px 36px 0 0; filter: url(#goo); opacity:0; }
+    .mobile-menu.opening .mobile-dropdown::before { animation: blobIn 420ms ease forwards; }
+    .mobile-menu.closing .mobile-dropdown::before { animation: blobOut 420ms ease forwards; }
+    @keyframes blobIn { 0%{ opacity:1; transform: translateX(-50%) translateY(-12px) scaleX(.5); height:36px; } 70%{ opacity:1; transform: translateX(-50%) translateY(0) scaleX(1.1); height:18px; } 100%{ opacity:0; transform: translateX(-50%) translateY(0) scaleX(1); height:0; } }
+    @keyframes blobOut { 0%{ opacity:0; height:0; transform: translateX(-50%) translateY(0) scaleX(1);} 30%{ opacity:1; height:18px; } 100%{ opacity:1; transform: translateX(-50%) translateY(-12px) scaleX(.5); height:36px; } }
+         .overlay { opacity: 0; transition: opacity 0.4s ease; }
+     .mobile-menu.active .overlay { opacity: 1; }
+         body.menu-open { overflow: auto; }
+    .hamburger span { transition: all 0.3s ease-in-out; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    
+    /* Font families */
+    .font-playfair { font-family: 'Playfair Display', serif !important; }
+    .font-poppins { font-family: 'Poppins', sans-serif !important; }
+    
+    /* Cursor styles for interactive elements */
+    .hamburger,
+    .close-mobile,
+    .cta-button,
+    button[type="submit"],
+    .nav-link,
+    a[href] {
+      cursor: pointer !important;
+    }
+  </style>
+</head>
+<body class="font-sans bg-subtle">
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg transform translate-y-full transition-transform duration-500 ease-in-out">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+        <div class="flex-1">
+          <h3 class="text-lg font-semibold text-high mb-2">🍪 Cookie-Einstellungen</h3>
+          <p class="text-medium text-sm leading-relaxed">
+            Wir verwenden Cookies und ähnliche Technologien, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
+            Einige Cookies sind für den Betrieb der Website erforderlich, andere helfen uns dabei, die Website zu verbessern. 
+            Sie können Ihre Einstellungen jederzeit ändern.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+          <button id="cookie-accept-all" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-btn font-medium transition-all duration-300 hover:scale-105 transform shadow-lg">
+            Alle akzeptieren
+          </button>
+          <button id="cookie-accept-essential" class="bg-subtle hover:bg-gray-200 text-high px-6 py-3 rounded-btn font-medium transition-all duration-300 border border-gray-300">
+            Nur erforderliche
+          </button>
+          <button id="cookie-settings" class="bg-white hover:bg-gray-50 text-primary px-6 py-3 rounded-btn font-medium transition-all duration-300 border border-primary">
+            Einstellungen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div id="cookie-settings-modal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="bg-white rounded-card shadow-card max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6 border-b border-gray-200">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-high">Cookie-Einstellungen</h2>
+            <button id="close-cookie-settings" class="text-gray-400 hover:text-gray-600 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <div class="p-6 space-y-6">
+          <!-- Essential Cookies -->
+          <div class="border border-gray-200 rounded-card p-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-semibold text-high">Erforderliche Cookies</h3>
+                <p class="text-sm text-medium">Diese Cookies sind für den Betrieb der Website unerlässlich</p>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="essential-cookies" checked disabled class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary">
+                <label for="essential-cookies" class="ml-2 text-sm text-medium">Immer aktiv</label>
+              </div>
+            </div>
+            <ul class="text-sm text-medium space-y-1">
+              <li>• PHP Session Cookies (für Kontaktformular)</li>
+              <li>• CSRF-Schutz-Token</li>
+              <li>• Cookie-Einwilligungspräferenzen</li>
+            </ul>
+          </div>
+
+          <!-- Analytics Cookies -->
+          <div class="border border-gray-200 rounded-card p-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-semibold text-high">Analyse-Cookies</h3>
+                <p class="text-sm text-medium">Helfen uns dabei, die Website zu verbessern</p>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="analytics-cookies" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary">
+                <label for="analytics-cookies" class="ml-2 text-sm text-medium">Aktivieren</label>
+              </div>
+            </div>
+            <ul class="text-sm text-medium space-y-1">
+              <li>• Google Fonts (Schriftarten)</li>
+              <li>• Font Awesome (Icons)</li>
+              <li>• Website-Performance-Metriken</li>
+            </ul>
+          </div>
+
+          <!-- Marketing Cookies -->
+          <div class="border border-gray-200 rounded-card p-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <h3 class="font-semibold text-high">Marketing-Cookies</h3>
+                <p class="text-sm text-medium">Für personalisierte Inhalte und externe Medien</p>
+              </div>
+              <div class="flex items-center">
+                <input type="checkbox" id="marketing-cookies" class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary">
+                <label for="marketing-cookies" class="ml-2 text-sm text-medium">Aktivieren</label>
+              </div>
+            </div>
+            <ul class="text-sm text-medium space-y-1">
+              <li>• OpenStreetMap (Karten)</li>
+              <li>• Unsplash (Bilder)</li>
+              <li>• Externe Medien</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-6 border-t border-gray-200 bg-gray-50">
+          <div class="flex flex-col sm:flex-row gap-3">
+            <button id="save-cookie-settings" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-btn font-medium transition-all duration-300">
+              Einstellungen speichern
+            </button>
+            <button id="cancel-cookie-settings" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-6 py-3 rounded-btn font-medium transition-all duration-300">
+              Abbrechen
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <nav id="floating-nav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-transform duration-300 will-change-transform">
+    <div class="bg-white/90 border border-white/30 rounded-full shadow-lg px-6 py-3">
+      <div class="flex items-center space-x-8">
+        <a href="/" class="text-lg font-bold text-primary hover:text-primary-dark transition-colors duration-300 flex items-center gap-2" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 md:w-7 md:h-7 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z"/></svg>
+        </a>
+        <div class="hidden md:flex items-center space-x-6">
+                                     <a href="/#aktuelles" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Aktuelles</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+           
+         <a href="/#leistungen" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Leistungen</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+           
+         <a href="/#praxis" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+             <span>Praxis</span>
+             <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+           </a>
+          <a href="impressum" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+            <span>Impressum</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+          <a href="datenschutz" class="nav-link text-high hover:text-primary px-3 py-2 text-sm font-medium transition-all duration-300 relative group">
+            <span>Datenschutz</span>
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+          </a>
+                     <a href="/#kontakt" class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 transform shadow-lg">
+               <span>Kontakt</span>
+             </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button class="hamburger flex flex-col justify-center items-center w-6 h-6 space-y-1 focus:outline-none">
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+            <span class="block w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile Menu (Dropdown under navbar) -->
+  <div class="mobile-menu">
+    <div class="overlay absolute inset-0"></div>
+    <div class="mobile-dropdown bg-white/90 border border-white/30 rounded-2xl shadow-lg">
+      <div class="flex items-center justify-between px-5 py-3">
+        <a href="/" class="flex items-center gap-3 text-primary font-semibold" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 10.5L12 3l9 7.5V20a2 2 0 0 1-2 2h-5v-6H10v6H5a2 2 0 0 1-2-2v-9.5z"/></svg>
+          <span>Startseite</span>
+        </a>
+        <button class="close-mobile w-8 h-8 rounded-full bg-white/50 hover:bg-white/70 flex items-center justify-center" aria-label="Menü schließen">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-700" viewBox="0 0 24 24" fill="currentColor"><path d="M6.225 4.811 4.811 6.225 10.586 12l-5.775 5.775 1.414 1.414L12 13.414l5.775 5.775 1.414-1.414L13.414 12l5.775-5.775-1.414-1.414L12 10.586 6.225 4.811z"/></svg>
+        </button>
+      </div>
+      <nav class="px-2 py-2">
+                 <a href="/#aktuelles" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+           <i class="fas fa-newspaper text-primary"></i>
+           <span class="text-high font-medium">Aktuelles</span>
+         </a>
+         <a href="/#leistungen" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+           <i class="fas fa-list text-primary"></i>
+           <span class="text-high font-medium">Leistungen</span>
+         </a>
+         <a href="/#praxis" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+           <i class="fas fa-clinic-medical text-primary"></i>
+           <span class="text-high font-medium">Praxis</span>
+         </a>
+         <a href="/#kontakt" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+           <i class="fas fa-envelope text-primary"></i>
+           <span class="text-high font-medium">Kontakt</span>
+         </a>
+        <a href="impressum" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+          <i class="fas fa-file-contract text-primary"></i>
+          <span class="text-high font-medium">Impressum</span>
+        </a>
+        <a href="datenschutz" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10">
+          <i class="fas fa-shield-alt text-primary"></i>
+          <span class="text-high font-medium">Datenschutz</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+  <main>
+
+  <main class="pt-32 pb-20">
+    <!-- Page Header -->
+    <section class="py-16 bg-tint-blue">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-high mb-6 font-playfair">Datenschutzerklärung</h1>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-card shadow-card p-8 md:p-12 space-y-8">
+          
+          <!-- Verantwortlicher -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-user-shield text-primary mr-3"></i>
+              Verantwortlicher für die Datenverarbeitung
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-2"><strong>Ibrahim Yilmaz</strong></p>
+                             <p class="text-medium mb-2">Bahnhofstr. 49</p>
+               <p class="text-medium mb-2">86381 Krumbach, Bayern</p>
+               <p class="text-medium mb-2">Telefon: 08282-6368880</p>
+               <p class="text-medium mb-2">Fax: 08282-6368879</p>
+              <p class="text-medium">E-Mail: info@hausarzt-yilmaz-krumbach.de</p>
+            </div>
+          </div>
+
+          <!-- Erhebung und Verarbeitung -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-database text-primary mr-3"></i>
+              Erhebung und Verarbeitung personenbezogener Daten
+            </h2>
+            <p class="text-medium mb-4">Wir erheben und verarbeiten personenbezogene Daten nur im notwendigen Umfang und ausschließlich für die in dieser Datenschutzerklärung genannten Zwecke:</p>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">a) Praxisbereich</h3>
+            <ul class="text-medium list-disc pl-6 space-y-2 mb-6">
+              <li>Persönliche Daten (Name, Geburtsdatum, Anschrift)</li>
+              <li>Kontaktdaten (Telefon, E-Mail)</li>
+              <li>Gesundheitsdaten (Anamnese, Diagnosen, Therapien)</li>
+              <li>Versicherungsdaten (Krankenkasse, Versicherungsnummer)</li>
+              <li>Termin- und Abrechnungsdaten</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-high mb-3">b) Website und Kontaktformular</h3>
+            <ul class="text-medium list-disc pl-6 space-y-2">
+              <li>Name und E-Mail-Adresse (bei Kontaktaufnahme)</li>
+              <li>Nachrichteninhalt des Kontaktformulars</li>
+              <li>IP-Adresse und Zeitstempel der Anfrage</li>
+              <li>Browser- und Geräteinformationen</li>
+              <li>Cookies und lokale Speicher (localStorage)</li>
+            </ul>
+          </div>
+
+          <!-- Website-Daten und Protokolldateien -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-globe text-primary mr-3"></i>
+              Daten, die für die Bereitstellung der Website und die Erstellung der Protokolldateien verarbeitet werden
+            </h2>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">a) Welche Daten werden für welchen Zweck verarbeitet?</h3>
+            <p class="text-medium mb-4">Bei jedem Zugriff auf Inhalte der Website werden vorübergehend Daten gespeichert, die möglicherweise eine Identifizierung zulassen. Die folgenden Daten werden hierbei erhoben:</p>
+            <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+              <li>Datum und Uhrzeit des Zugriffs</li>
+              <li>IP-Adresse</li>
+              <li>Hostname des zugreifenden Rechners</li>
+              <li>Website, von der aus die Website aufgerufen wurde</li>
+              <li>Websites, die über die Website aufgerufen werden</li>
+              <li>Besuchte Seite auf unserer Website</li>
+              <li>Meldung, ob der Abruf erfolgreich war</li>
+              <li>Übertragene Datenmenge</li>
+              <li>Informationen über den Browsertyp und die verwendete Version</li>
+              <li>Betriebssystem</li>
+            </ul>
+            <p class="text-medium mb-4">Die vorübergehende Speicherung der Daten ist für den Ablauf eines Websitebesuchs erforderlich, um eine Auslieferung der Website zu ermöglichen. Eine weitere Speicherung in Protokolldateien erfolgt, um die Funktionsfähigkeit der Website und die Sicherheit der informationstechnischen Systeme sicherzustellen. In diesen Zwecken liegt auch unser berechtigtes Interesse an der Datenverarbeitung.</p>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">b) Auf welcher Rechtsgrundlage werden diese Daten verarbeitet?</h3>
+            <p class="text-medium mb-4">Die Daten werden auf der Grundlage des Art. 6 Abs. 1 Buchstabe f DS-GVO verarbeitet.</p>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">c) Gibt es neben dem Verantwortlichen weitere Empfänger der personenbezogenen Daten?</h3>
+            <p class="text-medium mb-4">Die Website wird bei unserem Hosting-Dienstleister gehostet. Der Hoster empfängt die oben genannten Daten als Auftragsverarbeiter.</p>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">d) Wie lange werden die Daten gespeichert?</h3>
+            <p class="text-medium mb-4">Die Daten werden gelöscht, sobald sie für die Erreichung des Zwecks ihrer Erhebung nicht mehr erforderlich sind. Bei der Bereitstellung der Website ist dies der Fall, wenn die jeweilige Sitzung beendet ist. Die Protokolldateien werden maximal bis zu 24 Stunden direkt und ausschließlich für Administratoren zugänglich aufbewahrt. Danach sind sie nur noch indirekt über die Rekonstruktion von Sicherungsbändern verfügbar und werden nach maximal vier Wochen endgültig gelöscht.</p>
+          </div>
+
+          <!-- Externe Dienste und Services -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-cloud text-primary mr-3"></i>
+              Externe Dienste und Services
+            </h2>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">a) Externe Dienste und Services</h3>
+            <div class="bg-subtle rounded-card p-6 mb-6">
+              <p class="text-medium mb-3"><strong>Font Awesome CDN:</strong></p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li>Anbieter: Fonticons Inc., USA</li>
+                <li>Zweck: Bereitstellung von Icon-Schriftarten</li>
+                <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
+                <li>Datenübertragung: IP-Adresse, Browser-Informationen</li>
+                <li>Speicherdauer: Session-basiert</li>
+              </ul>
+              
+              <p class="text-medium mb-3"><strong>Font Awesome CDN:</strong></p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li>Anbieter: Fonticons Inc., USA</li>
+                <li>Zweck: Bereitstellung von Icon-Schriftarten</li>
+                <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
+                <li>Datenübertragung: IP-Adresse, Browser-Informationen</li>
+                <li>Speicherdauer: Session-basiert</li>
+              </ul>
+            </div>
+
+            <h3 class="text-xl font-semibold text-high mb-3">b) Web-Schriftarten</h3>
+            <div class="bg-subtle rounded-card p-6 mb-6">
+              <p class="text-medium mb-3"><strong>Google Fonts:</strong></p>
+              <ul class="text-medium list-disc pl-6 space-y-2">
+                <li>Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland</li>
+                <li>Zweck: Darstellung von Schriftarten (Inter, Playfair Display, Poppins)</li>
+                <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
+                <li>Datenübertragung: IP-Adresse, Browser-Informationen, Referrer-URL</li>
+                <li>Speicherdauer: 1 Jahr (Browser-Cache)</li>
+                <li>Datenschutzerklärung: <span class="text-primary">https://policies.google.com/privacy</span></li>
+              </ul>
+            </div>
+
+            <h3 class="text-xl font-semibold text-high mb-3">c) Kartenservice</h3>
+            <div class="bg-subtle rounded-card p-6 mb-6">
+              <p class="text-medium mb-3"><strong>OpenStreetMap:</strong></p>
+              <ul class="text-medium list-disc pl-6 space-y-2">
+                <li>Anbieter: OpenStreetMap Foundation, St John's Innovation Centre, Cowley Road, Cambridge CB4 0WS, United Kingdom</li>
+                <li>Zweck: Darstellung interaktiver Karten zur Standortanzeige</li>
+                <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
+                <li>Datenübertragung: IP-Adresse, Browser-Informationen, Standortdaten</li>
+                <li>Speicherdauer: Session-basiert</li>
+                <li>Datenschutzerklärung: <span class="text-primary">https://wiki.osmfoundation.org/wiki/Privacy_Policy</span></li>
+              </ul>
+            </div>
+
+            <h3 class="text-xl font-semibold text-high mb-3">d) Bildmaterial</h3>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-3"><strong>Unsplash:</strong></p>
+              <ul class="text-medium list-disc pl-6 space-y-2">
+                <li>Anbieter: Unsplash Inc., 4060 boulevard Saint-Laurent, Montréal, QC H2W 1Y9, Kanada</li>
+                <li>Zweck: Bereitstellung lizenzfreier Bilder für die Website-Gestaltung</li>
+                <li>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
+                <li>Datenübertragung: IP-Adresse, Browser-Informationen beim Laden der Bilder</li>
+                <li>Speicherdauer: Browser-Cache (variabel)</li>
+                <li>Datenschutzerklärung: <span class="text-primary">https://unsplash.com/privacy</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Kontaktformular -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-envelope text-primary mr-3"></i>
+              Kontaktformular und E-Mail-Kommunikation
+            </h2>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">a) Kontaktformular</h3>
+            <div class="bg-subtle rounded-card p-6 mb-6">
+              <p class="text-medium mb-4">Bei der Nutzung unseres Kontaktformulars werden folgende Daten verarbeitet:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li>Vor- und Nachname</li>
+                <li>E-Mail-Adresse</li>
+                <li>Nachrichteninhalt</li>
+                <li>IP-Adresse und Zeitstempel</li>
+                <li>Browser- und Geräteinformationen</li>
+                <li>CSRF-Token (Sicherheitsmaßnahme)</li>
+              </ul>
+              <p class="text-medium mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</p>
+              <p class="text-medium mb-2"><strong>Zweck:</strong> Bearbeitung Ihrer Anfrage und Kontaktaufnahme</p>
+              <p class="text-medium"><strong>Speicherdauer:</strong> 3 Jahre ab letztem Kontakt</p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-high mb-3">b) Spam-Schutz</h3>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-4">Zum Schutz vor Spam verwenden wir folgende Maßnahmen:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li><strong>Rate Limiting:</strong> Begrenzung der Anfragen pro IP-Adresse (3 pro Stunde)</li>
+                <li><strong>Honeypot-Verfahren:</strong> Versteckte Formularfelder zur Bot-Erkennung</li>
+                <li><strong>Zeitbasierte Prüfung:</strong> Mindestzeit zum Ausfüllen des Formulars</li>
+                <li><strong>CSRF-Schutz:</strong> Einmalige Sicherheitstoken pro Session</li>
+                <li><strong>Inhaltsfilterung:</strong> Automatische Erkennung von Spam-Mustern</li>
+              </ul>
+              <p class="text-medium mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am Schutz vor Missbrauch)</p>
+              <p class="text-medium"><strong>Speicherdauer:</strong> Rate-Limiting-Daten werden nach 1 Stunde automatisch gelöscht</p>
+            </div>
+          </div>
+
+          <!-- Cookies und lokale Speicher -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-cookie-bite text-primary mr-3"></i>
+              Cookies und lokale Speicher
+            </h2>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">Cookie-Einwilligung und Verwaltung</h3>
+            <div class="bg-subtle rounded-card p-6 mb-6">
+              <p class="text-medium mb-4">Wir verwenden ein Cookie-Einwilligungssystem, das es Ihnen ermöglicht, Ihre Cookie-Präferenzen zu verwalten:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li><strong>Cookie-Banner:</strong> Wird beim ersten Besuch der Website angezeigt</li>
+                <li><strong>Drei Optionen:</strong> Alle Cookies akzeptieren, nur erforderliche Cookies, oder individuelle Einstellungen</li>
+                <li><strong>Cookie-Einstellungen:</strong> Über den Footer-Link "Cookie-Einstellungen" jederzeit änderbar</li>
+                <li><strong>Speicherung:</strong> Ihre Präferenzen werden im localStorage gespeichert</li>
+              </ul>
+              <p class="text-medium mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) und Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</p>
+              <p class="text-medium"><strong>Zweck:</strong> Einhaltung der DSGVO-Anforderungen und transparente Cookie-Verwaltung</p>
+            </div>
+            
+            <h3 class="text-xl font-semibold text-high mb-3">a) Erforderliche Cookies</h3>
+            <div class="bg-subtle rounded-card p-6 mb-6">
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li><strong>PHP Session Cookie (PHPSESSID):</strong> Erforderlich für die Funktionalität des Kontaktformulars</li>
+                <li><strong>CSRF-Token:</strong> Schutz vor Cross-Site-Request-Forgery-Angriffen</li>
+              </ul>
+              <p class="text-medium mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</p>
+              <p class="text-medium"><strong>Speicherdauer:</strong> Session-Ende bzw. Browser-Schließung</p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-high mb-3">b) Lokale Speicher (localStorage)</h3>
+            <div class="bg-subtle rounded-card p-6">
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li><strong>hasSeenPracticeOpeningPopup:</strong> Speichert, ob der Nutzer das Informations-Popup bereits gesehen hat</li>
+                <li><strong>cookieConsent:</strong> Speichert die Cookie-Einwilligungspräferenzen des Nutzers</li>
+              </ul>
+              <p class="text-medium mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an nutzerfreundlicher Website-Gestaltung)</p>
+              <p class="text-medium mb-2"><strong>Zweck:</strong> Vermeidung wiederholter Anzeige von Informationen und Verwaltung der Cookie-Einwilligung</p>
+              <p class="text-medium"><strong>Speicherdauer:</strong> Bis zur manuellen Löschung durch den Nutzer</p>
+            </div>
+          </div>
+
+          <!-- Rechtsgrundlagen -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-balance-scale text-primary mr-3"></i>
+              Rechtsgrundlagen der Datenverarbeitung
+            </h2>
+            <p class="text-medium mb-4">Die Verarbeitung Ihrer personenbezogenen Daten erfolgt auf folgenden Rechtsgrundlagen:</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Art. 6 Abs. 1 lit. b DSGVO</h4>
+                <p class="text-medium text-sm">Zur Erfüllung des Behandlungsvertrags</p>
+              </div>
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Art. 6 Abs. 1 lit. c DSGVO</h4>
+                <p class="text-medium text-sm">Zur Erfüllung rechtlicher Verpflichtungen</p>
+              </div>
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Art. 6 Abs. 1 lit. f DSGVO</h4>
+                <p class="text-medium text-sm">Zur Wahrung berechtigter Interessen</p>
+              </div>
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Art. 9 Abs. 2 lit. h DSGVO</h4>
+                <p class="text-medium text-sm">Für medizinische Zwecke</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zwecke der Verarbeitung -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-bullseye text-primary mr-3"></i>
+              Zwecke der Datenverarbeitung
+            </h2>
+            <p class="text-medium mb-4">Ihre Daten werden für folgende Zwecke verarbeitet:</p>
+            <ul class="text-medium list-disc pl-6 space-y-2">
+              <li>Durchführung der medizinischen Behandlung</li>
+              <li>Kommunikation mit Ihnen als Patient</li>
+              <li>Terminverwaltung und -erinnerungen</li>
+              <li>Abrechnung mit Krankenkassen</li>
+              <li>Qualitätssicherung und -verbesserung</li>
+              <li>Erfüllung gesetzlicher Meldepflichten</li>
+            </ul>
+          </div>
+
+          <!-- Datenweitergabe -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-share-alt text-primary mr-3"></i>
+              Datenweitergabe an Dritte
+            </h2>
+            <p class="text-medium mb-4">Eine Weitergabe Ihrer Daten erfolgt nur in den gesetzlich vorgeschriebenen Fällen oder mit Ihrer ausdrücklichen Einwilligung:</p>
+            <div class="bg-subtle rounded-card p-6">
+              <ul class="text-medium list-disc pl-6 space-y-2">
+                <li><strong>Krankenkassen:</strong> Für Abrechnungszwecke</li>
+                <li><strong>Ärzte und Therapeuten:</strong> Bei Überweisungen</li>
+                <li><strong>Labore und Apotheken:</strong> Für Untersuchungen und Medikamente</li>
+                <li><strong>Behörden:</strong> Bei gesetzlichen Meldepflichten</li>
+                <li><strong>IT-Dienstleister:</strong> Für Wartung und Support (nur bei Auftragsverarbeitung)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Speicherdauer -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-clock text-primary mr-3"></i>
+              Speicherdauer
+            </h2>
+            <p class="text-medium mb-4">Ihre Daten werden entsprechend den gesetzlichen Vorgaben gespeichert:</p>
+            <div class="bg-subtle rounded-card p-6">
+              <ul class="text-medium list-disc pl-6 space-y-2">
+                <li><strong>Patientenakten:</strong> 10 Jahre nach der letzten Behandlung</li>
+                <li><strong>Abrechnungsdaten:</strong> 10 Jahre nach Abrechnung</li>
+                <li><strong>Röntgenaufnahmen:</strong> 30 Jahre</li>
+                <li><strong>Laborbefunde:</strong> 10 Jahre</li>
+                <li><strong>Kontaktdaten:</strong> Bis zur Löschung der Akte</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Ihre Rechte -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-user-check text-primary mr-3"></i>
+              Ihre Rechte als Betroffener
+            </h2>
+            <p class="text-medium mb-4">Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+            
+            <div class="space-y-4">
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">a) Recht auf Auskunft</h4>
+                <p class="text-medium">Sie können Auskunft nach Art. 15 DS-GVO über Ihre personenbezogenen Daten verlangen, die wir verarbeiten.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">b) Recht auf Widerspruch</h4>
+                <p class="text-medium">Sie haben ein Recht auf Widerspruch aus besonderen Gründen (siehe unter Punkt II).</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">c) Recht auf Berichtigung</h4>
+                <p class="text-medium">Sollten die Sie betreffenden Angaben nicht (mehr) zutreffend sein, können Sie nach Art. 16 DS-GVO eine Berichtigung verlangen. Sollten Ihre Daten unvollständig sein, können Sie eine Vervollständigung verlangen.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">d) Recht auf Löschung</h4>
+                <p class="text-medium">Sie können nach Art. 17 DS-GVO die Löschung Ihrer personenbezogenen Daten verlangen.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">e) Recht auf Einschränkung der Verarbeitung</h4>
+                <p class="text-medium">Sie haben nach Art. 18 DS-GVO das Recht, eine Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">f) Recht auf Beschwerde</h4>
+                <p class="text-medium">Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen Datenschutzrecht verstößt, haben Sie nach Art. 77 Abs. 1 DS-GVO das Recht, sich bei einer Datenschutzaufsichtsbehörde eigener Wahl zu beschweren. Hierzu gehört auch die für den Verantwortlichen zuständige Datenschutzaufsichtsbehörde: Bayerische Landesbeauftragte für Datenschutz, https://www.datenschutz-bayern.de/kontakt.html.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">g) Recht auf Datenübertragbarkeit</h4>
+                <p class="text-medium">Für den Fall, dass die Voraussetzungen des Art. 20 Abs. 1 DS-GVO vorliegen, steht Ihnen das Recht zu, sich Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen zu lassen. Die Erfassung der Daten zur Bereitstellung der Website und die Speicherung der Protokolldateien sind für den Betrieb der Internetseite zwingend erforderlich. Sie beruhen daher nicht auf einer Einwilligung nach Art. 6 Abs. 1 Buchstabe a DS-GVO oder auf einem Vertrag nach Art. 6 Abs. 1 Buchstabe b DS-GVO, sondern sind nach Art. 6 Abs. 1 Buchstabe f DS-GVO gerechtfertigt. Die Voraussetzungen des Art. 20 Abs. 1 DS-GVO sind demnach insoweit nicht erfüllt.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recht auf Widerspruch -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-ban text-primary mr-3"></i>
+              II. Recht auf Widerspruch gemäß Art. 21 Abs. 1 DS-GVO
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium">Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten, die aufgrund von Artikel 6 Abs. 1 Buchstabe f DS-GVO erfolgt, Widerspruch einzulegen. Der Verantwortliche verarbeitet die personenbezogenen Daten dann nicht mehr, es sei denn, er kann zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die die Interessen, Rechte und Freiheiten der betroffenen Person überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
+              <p class="text-medium mt-4">Die Erfassung der Daten zur Bereitstellung der Website und die Speicherung der Protokolldateien sind für den Betrieb der Internetseite zwingend erforderlich.</p>
+            </div>
+          </div>
+
+          <!-- Kontakt -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-envelope text-primary mr-3"></i>
+              Kontakt für Datenschutzfragen
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-4">Bei Fragen zum Datenschutz oder zur Ausübung Ihrer Rechte können Sie sich an uns wenden:</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h4 class="font-semibold text-high mb-2">Direkt in der Praxis:</h4>
+                                     <p class="text-medium">Ibrahim Yilmaz<br>Bahnhofstr. 49<br>86381 Krumbach</p>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-high mb-2">Per E-Mail:</h4>
+                  <p class="text-medium">info@hausarzt-yilmaz-krumbach.de</p>
+                                     <h4 class="font-semibold text-high mb-2 mt-4">Per Telefon:</h4>
+                  <p class="text-medium">08282-6368880</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Datenübertragung in Drittländer -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-globe-americas text-primary mr-3"></i>
+              Datenübertragung in Drittländer
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-4">Einige der von uns genutzten Dienste übertragen Daten in Länder außerhalb der Europäischen Union:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li><strong>USA:</strong> Font Awesome, Google Fonts</li>
+                <li><strong>Kanada:</strong> Unsplash</li>
+              </ul>
+              <p class="text-medium mb-4">Diese Übertragungen erfolgen auf Grundlage von:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2">
+                <li>Angemessenheitsbeschlüssen der EU-Kommission</li>
+                <li>EU-Standardvertragsklauseln</li>
+                <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) in Verbindung mit zusätzlichen Schutzmaßnahmen</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Betroffenenrechte erweitert -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-user-shield text-primary mr-3"></i>
+              Erweiterte Betroffenenrechte
+            </h2>
+            
+            <div class="space-y-4">
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Widerruf der Einwilligung</h4>
+                <p class="text-medium">Soweit die Verarbeitung auf einer Einwilligung beruht, haben Sie das Recht, diese jederzeit zu widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Automatisierte Entscheidungsfindung</h4>
+                <p class="text-medium">Wir setzen keine automatisierte Entscheidungsfindung oder Profiling im Sinne von Art. 22 DSGVO ein.</p>
+              </div>
+              
+              <div class="bg-subtle rounded-card p-4">
+                <h4 class="font-semibold text-high mb-2">Datenschutzbeauftragter</h4>
+                <p class="text-medium">Aufgrund der geringen Anzahl der Beschäftigten in unserer Praxis ist die Bestellung eines Datenschutzbeauftragten nicht erforderlich. Bei Fragen zum Datenschutz wenden Sie sich direkt an uns.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Datensicherheit -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-shield-alt text-primary mr-3"></i>
+              Datensicherheit und technische Maßnahmen
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-4">Wir treffen umfassende technische und organisatorische Maßnahmen zum Schutz Ihrer personenbezogenen Daten:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li><strong>Verschlüsselung:</strong> SSL/TLS-Verschlüsselung für die Datenübertragung</li>
+                <li><strong>Zugriffskontrolle:</strong> Beschränkung des Zugriffs auf autorisierte Personen</li>
+                <li><strong>Spam-Schutz:</strong> Mehrschichtige Sicherheitsmaßnahmen gegen Missbrauch</li>
+                <li><strong>Regelmäßige Updates:</strong> Aktuelle Software und Sicherheitspatches</li>
+                <li><strong>Datensicherung:</strong> Regelmäßige Backups mit sicherer Aufbewahrung</li>
+                <li><strong>Zutrittskontrolle:</strong> Physischer Schutz der Serverräume und Arbeitsplätze</li>
+              </ul>
+              <p class="text-medium">Trotz aller Sicherheitsmaßnahmen kann eine absolute Sicherheit bei der Datenübertragung über das Internet nicht garantiert werden.</p>
+            </div>
+          </div>
+
+          <!-- Hosting und Auftragsverarbeitung -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-server text-primary mr-3"></i>
+              Hosting und Auftragsverarbeitung
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-4">Diese Website wird extern gehostet. Der Hosting-Anbieter verarbeitet die folgenden Daten als Auftragsverarbeiter:</p>
+              <ul class="text-medium list-disc pl-6 space-y-2 mb-4">
+                <li>IP-Adressen der Website-Besucher</li>
+                <li>Browserinformationen und Betriebssystem</li>
+                <li>Datum und Uhrzeit des Zugriffs</li>
+                <li>Aufgerufene Seiten und übertragene Dateien</li>
+                <li>Kontaktformular-Daten</li>
+              </ul>
+              <p class="text-medium mb-2"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am zuverlässigen Betrieb der Website)</p>
+              <p class="text-medium mb-2"><strong>Zweck:</strong> Bereitstellung, Sicherheit und Optimierung der Website</p>
+              <p class="text-medium">Mit dem Hosting-Anbieter wurde ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO geschlossen.</p>
+            </div>
+          </div>
+
+          <!-- Änderungen der Datenschutzerklärung -->
+          <div>
+            <h2 class="text-2xl font-bold text-high mb-4 flex items-center">
+              <i class="fas fa-edit text-primary mr-3"></i>
+              Änderungen dieser Datenschutzerklärung
+            </h2>
+            <div class="bg-subtle rounded-card p-6">
+              <p class="text-medium mb-4">Wir behalten uns vor, diese Datenschutzerklärung zu aktualisieren, um sie an geänderte Rechtslage oder bei Änderungen unserer Leistungen anzupassen.</p>
+              <p class="text-medium mb-4">Bei wesentlichen Änderungen werden wir Sie durch eine entsprechende Information auf unserer Website oder per E-Mail benachrichtigen.</p>
+              <p class="text-medium">Wir empfehlen Ihnen, diese Datenschutzerklärung regelmäßig zu überprüfen.</p>
+            </div>
+          </div>
+
+          <!-- Aktualisierung -->
+          <div class="bg-blue-50/80 border-l-4 border-blue-500 p-6 rounded-card">
+            <h3 class="text-lg font-semibold text-high mb-2 flex items-center">
+              <i class="fas fa-calendar-alt text-blue-500 mr-2"></i>
+              Version und Gültigkeit
+            </h3>
+            <p class="text-medium mb-2">Diese Datenschutzerklärung ist aktuell gültig und hat den Stand vom <strong>Januar 2025</strong>.</p>
+            <p class="text-medium">Sie wurde entsprechend der EU-Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG) erstellt.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-8 mt-16">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-gray-500 text-sm">&copy; 2025 Hausarztpraxis Dr. Yilmaz. Alle Rechte vorbehalten.</div>
+      <div class="flex gap-4">
+        <a href="impressum" class="text-gray-400 hover:text-primary transition-colors">Impressum</a>
+        <a href="datenschutz" class="text-primary transition-colors">Datenschutz</a>
+        <button id="footer-cookie-settings" class="text-gray-400 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Cookie-Einstellungen</button>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle with proper animation classes
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const overlay = mobileMenu ? mobileMenu.querySelector('.overlay') : null;
+      const closeBtn = mobileMenu ? mobileMenu.querySelector('.close-mobile') : null;
+      const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+      
+      const toggleMobileMenu = (open) => {
+        if (!mobileMenu) return;
+        // add opening/closing classes to enhance the goo animation timing
+        mobileMenu.classList.remove('opening','closing');
+        if (open) {
+          mobileMenu.classList.add('opening');
+          mobileMenu.classList.add('active');
+        } else {
+          mobileMenu.classList.add('closing');
+          // Wait for animation to finish before disabling pointer events
+          setTimeout(() => {
+            mobileMenu.classList.remove('active');
+            mobileMenu.classList.remove('closing');
+          }, 210);
+        }
+        document.body.classList.toggle('menu-open', open);
+        if (hamburger) hamburger.classList.toggle('active', open);
+      };
+      
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => toggleMobileMenu(!mobileMenu.classList.contains('active')));
+      }
+      if (overlay) overlay.addEventListener('click', () => toggleMobileMenu(false));
+      if (closeBtn) closeBtn.addEventListener('click', () => toggleMobileMenu(false));
+      mobileLinks.forEach(l => l.addEventListener('click', () => toggleMobileMenu(false)));
+    });
+
+    // Floating navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('floating-nav');
+        if (window.scrollY > 100) {
+            nav.classList.add('top-4');
+            nav.classList.remove('top-6');
+        } else {
+            nav.classList.remove('top-4');
+            nav.classList.add('top-6');
+        }
+    });
+
+    // Cookie Banner Functionality
+    class CookieManager {
+        constructor() {
+            this.cookieBanner = document.getElementById('cookie-banner');
+            this.cookieModal = document.getElementById('cookie-settings-modal');
+            this.analyticsCheckbox = document.getElementById('analytics-cookies');
+            this.marketingCheckbox = document.getElementById('marketing-cookies');
+            
+            this.init();
+        }
+
+        init() {
+            // Check if user has already made a choice
+            const cookieConsent = this.getCookieConsent();
+            
+            if (!cookieConsent) {
+                // Show banner after a short delay
+                setTimeout(() => {
+                    this.showBanner();
+                }, 1000);
+            } else {
+                // Apply saved preferences
+                this.applyCookiePreferences(cookieConsent);
+            }
+
+            // Event listeners
+            document.getElementById('cookie-accept-all').addEventListener('click', () => {
+                this.acceptAllCookies();
+            });
+
+            document.getElementById('cookie-accept-essential').addEventListener('click', () => {
+                this.acceptEssentialCookies();
+            });
+
+            document.getElementById('cookie-settings').addEventListener('click', () => {
+                this.openSettingsModal();
+            });
+
+            document.getElementById('close-cookie-settings').addEventListener('click', () => {
+                this.closeSettingsModal();
+            });
+
+            document.getElementById('save-cookie-settings').addEventListener('click', () => {
+                this.saveSettings();
+            });
+
+            document.getElementById('cancel-cookie-settings').addEventListener('click', () => {
+                this.closeSettingsModal();
+            });
+
+            // Footer cookie settings button
+            const footerCookieSettings = document.getElementById('footer-cookie-settings');
+            if (footerCookieSettings) {
+                footerCookieSettings.addEventListener('click', () => {
+                    this.openSettingsModal();
+                });
+            }
+
+            // Close modal when clicking outside
+            this.cookieModal.addEventListener('click', (e) => {
+                if (e.target === this.cookieModal) {
+                    this.closeSettingsModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !this.cookieModal.classList.contains('hidden')) {
+                    this.closeSettingsModal();
+                }
+            });
+        }
+
+        showBanner() {
+            this.cookieBanner.classList.remove('translate-y-full');
+        }
+
+        hideBanner() {
+            this.cookieBanner.classList.add('translate-y-full');
+        }
+
+        openSettingsModal() {
+            this.cookieModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        closeSettingsModal() {
+            this.cookieModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        acceptAllCookies() {
+            const consent = {
+                essential: true,
+                analytics: true,
+                marketing: true,
+                timestamp: new Date().toISOString()
+            };
+            
+            this.setCookieConsent(consent);
+            this.applyCookiePreferences(consent);
+            this.hideBanner();
+        }
+
+        acceptEssentialCookies() {
+            const consent = {
+                essential: true,
+                analytics: false,
+                marketing: false,
+                timestamp: new Date().toISOString()
+            };
+            
+            this.setCookieConsent(consent);
+            this.applyCookiePreferences(consent);
+            this.hideBanner();
+        }
+
+        saveSettings() {
+            const consent = {
+                essential: true, // Always true
+                analytics: this.analyticsCheckbox.checked,
+                marketing: this.marketingCheckbox.checked,
+                timestamp: new Date().toISOString()
+            };
+            
+            this.setCookieConsent(consent);
+            this.applyCookiePreferences(consent);
+            this.closeSettingsModal();
+            this.hideBanner();
+        }
+
+        getCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            return consent ? JSON.parse(consent) : null;
+        }
+
+        setCookieConsent(consent) {
+            localStorage.setItem('cookieConsent', JSON.stringify(consent));
+        }
+
+        applyCookiePreferences(consent) {
+            // Essential cookies are always enabled
+            if (consent.analytics) {
+                this.enableAnalyticsCookies();
+            } else {
+                this.disableAnalyticsCookies();
+            }
+
+            if (consent.marketing) {
+                this.enableMarketingCookies();
+            } else {
+                this.disableMarketingCookies();
+            }
+
+            // Update checkboxes in settings modal
+            if (this.analyticsCheckbox) {
+                this.analyticsCheckbox.checked = consent.analytics;
+            }
+            if (this.marketingCheckbox) {
+                this.marketingCheckbox.checked = consent.marketing;
+            }
+        }
+
+        enableAnalyticsCookies() {
+            // Enable Google Fonts and Font Awesome
+            // These are loaded via CDN, so we just track the consent
+            console.log('Analytics cookies enabled');
+        }
+
+        disableAnalyticsCookies() {
+            // Disable Google Fonts and Font Awesome
+            // Note: This is a limitation of CDN services
+            // In a production environment, you might want to load fonts locally
+            console.log('Analytics cookies disabled');
+        }
+
+        enableMarketingCookies() {
+            // Enable OpenStreetMap and Unsplash
+            console.log('Marketing cookies enabled');
+        }
+
+        disableMarketingCookies() {
+            // Disable OpenStreetMap and Unsplash
+            // Note: This is a limitation of external services
+            console.log('Marketing cookies disabled');
+        }
+    }
+
+    // Initialize cookie manager when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        new CookieManager();
+    });
+  </script>
+</body>
+</html>
